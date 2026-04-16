@@ -85,7 +85,8 @@
         
         <div class="c-card" data-i="1" style="border-radius: 4cap;">
           <div class="c-media bg-2">
-           <video src="video/parco.mp4" autoplay muted loop playsinline></video> 
+           <video src="video/parco.mp4" 
+           class="video-card" autoplay muted loop playsinline></video> 
             <div class="c-ph"></div>
             <span class="c-tag">Intrattenimento</span>
           </div>
@@ -98,7 +99,8 @@
         <div class="c-card" data-i="5" style="border-radius: 4cap;">
           <div class="c-media bg-6">
           <div class="c-ph"></div>
-            <video src="video/fontane.mov" autoplay muted loop playsinline></video> 
+            <video src="video/fontane.mp4" 
+             class="video-card" autoplay muted loop playsinline></video> 
             <span class="c-tag">Storia</span>
           </div>
           <div class="c-body">
@@ -111,7 +113,8 @@
         <div class="c-card" data-i="3" style="border-radius: 4cap;"><div class="c-media bg-4" >
            
             <div class="c-ph"> </div>
-            <video src="video/piazza.mp4" autoplay muted loop playsinline></video> 
+            <video src="video/piazza.mp4"  
+            class="video-card" autoplay muted loop playsinline></video> 
             <span class="c-tag">Centro</span>
           </div>
           <div class="c-body" >
@@ -511,6 +514,37 @@ document.querySelectorAll('.rv').forEach(el => ro.observe(el));
   document.getElementById('c-prev').onclick = ()=> goC(Math.max(ci-1, 0));
   window.addEventListener('resize', ()=> goC(ci), {passive:true});
 
+  // Selezioniamo tutti i video nel carosello
+const videos = document.querySelectorAll('.video-card');
+
+const handleIntersection = (entries) => {
+    // Troviamo quale video è PIÙ visibile degli altri
+    let mostVisibleVideo = null;
+    let highestRatio = 0;
+
+    entries.forEach(entry => {
+        if (entry.intersectionRatio > highestRatio) {
+            highestRatio = entry.intersectionRatio;
+            mostVisibleVideo = entry.target;
+        }
+    });
+
+    // Applichiamo i cambiamenti
+    videos.forEach(video => {
+        if (video === mostVisibleVideo && highestRatio > 0.5) {
+            video.muted = false;
+            video.play().catch(() => {}); // catch evita errori se il browser blocca
+        } else {
+            video.muted = true;
+        }
+    });
+};
+
+const observer = new IntersectionObserver(handleIntersection, {
+    threshold: [0, 0.25, 0.5, 0.75, 1] // Controlla la visibilità a più livelli
+});
+
+videos.forEach(v => observer.observe(v));
   /* Swipe */
   let ts = 0;
   track.addEventListener('touchstart', e=>{ ts = e.touches[0].clientX; }, {passive:true});
