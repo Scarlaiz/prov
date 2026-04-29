@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<!-- ═══ NAVBAR ═══ -->
+<!-- NAVBAR  -->
 <nav id="nav">
   <a href="#" class="n-logo">Torre <span>del Greco</span></a>
   <ul class="n-links">
@@ -30,7 +30,7 @@
   <a href="#quiz"  class="ml">Quiz</a>
 </div>
 
-<!-- ═══ HERO ═══ -->
+<!--  HERO  -->
 <section id="hero">
   <canvas id="c-hero"></canvas>
 
@@ -62,15 +62,15 @@
   </div>
 </section>
 
-<!-- ═══ STATS ═══ -->
+<!--  STATS  -->
 <div class="stats-strip rv">
-  <div class="stat-item"><div class="stat-n">XIV<em> sec.</em></div><div class="stat-l">di storia viva</div></div>
   <div class="stat-item"><div class="stat-n">#1</div><div class="stat-l">al mondo nel corallo</div></div>
   <div class="stat-item"><div class="stat-n">20<em> min</em></div><div class="stat-l">da Napoli in treno</div></div>
   <div class="stat-item"><div class="stat-n">3<em> km</em></div><div class="stat-l">da Ercolano</div></div>
+  <div class="stat-item"><div class="stat-n">800<em> +</em></div><div class="stat-l">anni di tradizione </div></div>
 </div>
 
-<!-- ═══ CAROSELLO ═══ -->
+<!--  CAROSELLO  -->
 <section id="scopri" class="sec sec-alt">
   <div class="rv">
     <span class="s-eye">Da non perdere</span>
@@ -86,7 +86,7 @@
         <div class="c-card" data-i="1" style="border-radius: 4cap;">
           <div class="c-media bg-2">
            <video src="video/parco.mp4" 
-           class="video-card" autoplay muted loop playsinline></video> 
+           class="video-card" muted loop playsinline ></video> 
             <div class="c-ph"></div>
             <span class="c-tag">Intrattenimento</span>
           </div>
@@ -100,7 +100,7 @@
           <div class="c-media bg-6">
           <div class="c-ph"></div>
             <video src="video/fontane.mp4" 
-             class="video-card" autoplay muted loop playsinline></video> 
+             class="video-card" muted loop playsinline ></video> 
             <span class="c-tag">Storia</span>
           </div>
           <div class="c-body">
@@ -114,7 +114,8 @@
            
             <div class="c-ph"> </div>
             <video src="video/piazza.mp4"  
-            class="video-card" autoplay muted loop playsinline></video> 
+            class="video-card" muted loop playsinline autoplay></video> 
+            <button type="button" class="c-ph-btn">▶</button>
             <span class="c-tag">Centro</span>
           </div>
           <div class="c-body" >
@@ -152,7 +153,7 @@
 
         <div class="c-card" data-i="0" style="border-radius: 4cap;">
         <div class="c-media bg-1">
-        <video src="video/basilica.mp4" autoplay muted loop playsinline></video> 
+        <video src="video/basilica.mp4"  muted loop playsinline preload="auto"></video> 
          <div class="c-ph">
           </div>
           <span class="c-tag">Cultura</span>
@@ -169,14 +170,14 @@
     </div>
 
     <div class="c-ctrl">
-      <button class="c-btn" id="c-prev">←</button>
-      <div id="c-dots" style="display:flex;gap:.6rem;align-items:center"></div>
-      <button class="c-btn" id="c-next">→</button>
+      <button type="button" class="c-btn" id="c-prev">←</button>
+      <div id="c-dots" class="c-dots"></div>
+      <button type="button" class="c-btn" id="c-next">→</button>
     </div>
   </div>
 </section>
 
-<!-- ═══ LUOGHI ═══ -->
+<!--  LUOGHI  -->
 <section id="luoghi" class="sec sec-cream">
   <div class="rv">
     <span class="s-eye">Punti di interesse</span>
@@ -186,45 +187,45 @@
   <div class="l-grid">
 
     <div class="l-card rv d1">
-      <button type="button" class="fav" onclick="toggleFav(this)" aria-label="Preferiti"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></button>
-      <div class="l-img l-img-1"><span>🌿</span></div>
+      <button type="button" class="fav" onclick="toggleFav(this)" aria-label="Preferiti"><svg viewBox="0 0 24 24"><title>Aggiungi ai preferiti</title><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></button>
+      <div class="l-img l-img-1"><span></span></div>
       <div class="l-body"><div class="l-tag">Cultura · Storia</div><div class="l-title">Villa delle Ginestre</div><p class="l-desc">Cammina nelle stanze di Leopardi con la vista sul vulcano. Un luogo sospeso nel tempo che parla ancora all'anima.</p><button type="button" class="l-btn">Scopri Curiosità</button></div>
     </div>
 
     <div class="l-card rv d2">
-      <button type="button" class="fav" onclick="toggleFav(this)" aria-label="Preferiti"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></button>
-      <div class="l-img l-img-2"><span>⛪️</span></div>
+      <button type="button" class="fav" onclick="toggleFav(this)" aria-label="Preferiti"><svg viewBox="0 0 24 24"><title>Aggiungi ai preferiti</title><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></button>
+      <div class="l-img l-img-2"><span></span></div>
       <div class="l-body"><div class="l-tag">Fede · Barocco</div><div class="l-title">Basilica di Santa Croce</div><p class="l-desc">Simbolo di resilienza.La chiesa madre sorge sulle stratificazioni laviche del 1794 — un unicum geologico e architettonico al mondo.</p><button type="button" class="l-btn">Scopri Curiosità</button></div>
     </div>
 
     <div class="l-card rv d3">
-      <button type="button" class="fav" onclick="toggleFav(this)" aria-label="Preferiti"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></button>
-      <div class="l-img l-img-3"><span>🪸</span></div>
+      <button type="button" class="fav" onclick="toggleFav(this)" aria-label="Preferiti"><svg viewBox="0 0 24 24"><title>Aggiungi ai preferiti</title><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></button>
+      <div class="l-img l-img-3"><span></span></div>
       <div class="l-body"><div class="l-tag">Artigianato · Arte</div><div class="l-title">Museo del Corallo</div><p class="l-desc">Oltre 3000 pezzi dal Cinquecento. Il più importante museo al mondo dedicato all'arte dell'incisione del corallo rosso.</p><button type="button" class="l-btn">Scopri Curiosità</button></div>
     </div>
 
     <div class="l-card rv d1">
-      <button type="button" class="fav" onclick="toggleFav(this)" aria-label="Preferiti"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></button>
-      <div class="l-img l-img-4"><span>⚓️</span></div>
+      <button type="button" class="fav" onclick="toggleFav(this)" aria-label="Preferiti"><svg viewBox="0 0 24 24"><title>Aggiungi ai preferiti</title><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></button>
+      <div class="l-img l-img-4"><span></span></div>
       <div class="l-body"><div class="l-tag">Mare · Panorama</div><div class="l-title">Porto Panoramico</div><p class="l-desc">Dal porto si abbraccia il golfo intero. Il tramonto con il Vesuvio in silhouette è tra le viste più belle d'Italia.</p><button type="button" class="l-btn">Scopri Curiosità</button></div>
     </div>
 
     <div class="l-card rv d2">
-      <button type="button" class="fav" onclick="toggleFav(this)" aria-label="Preferiti"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></button>
-      <div class="l-img l-img-5"><span>🕯</span></div>
+      <button type="button" class="fav" onclick="toggleFav(this)" aria-label="Preferiti"><svg viewBox="0 0 24 24"><title>Aggiungi ai preferiti</title><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></button>
+      <div class="l-img l-img-5"><span></span></div>
       <div class="l-body"><div class="l-tag">Mistero · Folklore</div><div class="l-title">Ipogeo delle Anime</div><p class="l-desc">Il culto delle "capuzzelle" — devozione popolare per le anime del Purgatorio — un rito unico al mondo sotto la chiesa di San Michele.</p><button type="button" class="l-btn">Scopri Curiosità</button></div>
     </div>
 
     <div class="l-card rv d3">
-      <button type="button" class="fav" onclick="toggleFav(this)" aria-label="Preferiti"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></button>
-      <div class="l-img l-img-6"><span>🌋</span></div>
+      <button type="button" class="fav" onclick="toggleFav(this)" aria-label="Preferiti"><svg viewBox="0 0 24 24"><title>Aggiungi ai preferiti</title><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></button>
+      <div class="l-img l-img-6"><span></span></div>
       <div class="l-body"><div class="l-tag">Natura · Trekking</div><div class="l-title">Parco del Vesuvio</div><p class="l-desc">Torre del Greco è la porta ideale per salire al cratere. Un panorama che abbraccia tutta la Campania fino all'orizzonte.</p><button type="button" class="l-btn">Scopri Curiosità</button></div>
     </div>
 
   </div>
 </section>
 
-<!-- ═══ GASTRONOMIA ═══ -->
+<!--  GASTRONOMIA  -->
 <section id="gastro" class="sec sec-alt">
   <div class="rv">
     <span class="s-eye">A tavola</span>
@@ -249,7 +250,7 @@
   </div>
 </section>
 
-<!-- ═══ DIALETTO ═══ -->
+<!--  DIALETTO  -->
 <section id="dialetto" class="sec sec-cream">
   <div class="dial-wrap">
     <div class="rv" style="position:relative">
@@ -277,7 +278,7 @@
   </div>
 </section>
 
-<!-- ═══ QUIZ ═══ -->
+<!--  QUIZ  -->
 <section id="quiz" class="sec sec-alt">
   <div class="q-wrap">
     <div class="rv" style="text-align:center;margin-bottom:3rem">
@@ -290,37 +291,37 @@
       <div class="q-start-inner">
         <div class="q-emoji">🗺</div>
         <p class="q-start-p">Rispondi a tre domande e costruiamo insieme un itinerario su misura basato sui tuoi interessi e sulla tua disponibilità.</p>
-        <button class="btn-fill" id="q-start-btn" style="margin:0 auto">Inizia il Quiz</button>
+        <button type="button" class="btn-fill" id="q-start-btn">Inizia il Quiz</button>
       </div>
     </div>
 
     <div class="q-box hidden" id="q-panel">
-        <div class="q-prog"><div class="q-fill" id="q-fill" style="width:33%"></div></div>
+        <div class="q-prog"><div class="q-fill" id="q-fill"></div></div>
       <div class="q-ctr" id="q-ctr">Domanda 1 di 3</div>
       <div class="q-step on" id="qs-1">
         <div class="q-ttl">Cosa ti attrae di più?</div>
         <div class="q-opts">
-          <button class="q-opt" data-v="mare">🌊 Il mare e il lungomare</button>
-          <button class="q-opt" data-v="cultura">🏛 Cultura, arte e storia</button>
-          <button class="q-opt" data-v="natura">🌋 Natura e trekking</button>
-          <button class="q-opt" data-v="cibo">🍽 Cucina e gastronomia</button>
+          <button type="button" class="q-opt" data-v="mare">🌊 Il mare e il lungomare</button>
+          <button type="button" class="q-opt" data-v="cultura">🏛 Cultura, arte e storia</button>
+          <button type="button" class="q-opt" data-v="natura">🌋 Natura e trekking</button>
+          <button type="button" class="q-opt" data-v="cibo">🍽 Cucina e gastronomia</button>
         </div>
       </div>
       <div class="q-step" id="qs-2">
         <div class="q-ttl">Quanto tempo hai?</div>
         <div class="q-opts">
-          <button class="q-opt" data-v="mezz">⏱️ Mezza giornata</button>
-          <button class="q-opt" data-v="giorno">☀️ Una giornata intera</button>
-          <button class="q-opt" data-v="weekend">🗓 Un weekend</button>
+          <button type="button" class="q-opt" data-v="mezz">⏱️ Mezza giornata</button>
+          <button type="button" class="q-opt" data-v="giorno">☀️ Una giornata intera</button>
+          <button type="button" class="q-opt" data-v="weekend">🗓 Un weekend</button>
         </div>
       </div>
       <div class="q-step" id="qs-3">
         <div class="q-ttl">Viaggi con…?</div>
         <div class="q-opts">
-          <button class="q-opt" data-v="solo">🧳 Da solo/a</button>
-          <button class="q-opt" data-v="coppia">❤️ In coppia</button>
-          <button class="q-opt" data-v="famiglia">👨‍👩‍👧 Con la famiglia</button>
-          <button class="q-opt" data-v="amici">🎉 Con gli amici</button>
+          <button type="button" class="q-opt" data-v="solo">🧳 Da solo/a</button>
+          <button type="button" class="q-opt" data-v="coppia">❤️ In coppia</button>
+          <button type="button" class="q-opt" data-v="famiglia">👨‍👩‍👧 Con la famiglia</button>
+          <button type="button" class="q-opt" data-v="amici">🎉 Con gli amici</button>
         </div>
       </div>
       <div class="q-step" id="qs-result">
@@ -335,7 +336,7 @@
   </div>
 </section>
 
-<!-- ═══ FAQ ═══ -->
+<!--  FAQ  -->
 <section id="faq" class="sec sec-cream">
   <div class="faq-grid">
     <div class="rv">
@@ -355,7 +356,7 @@
   </div>
 </section>
 
-<!-- ═══ FOOTER ═══ -->
+<!--  FOOTER  -->
 <footer>
   <div class="f-logo">Torre <span>del Greco</span></div>
   <div class="f-links">
@@ -366,13 +367,10 @@
   </div>
   <div class="f-copy">© 2026 · Guida non ufficiale · Campania, Italia</div>
 </footer>
-
-<!-- ═══════════════════════════════════════════
-     THREE.JS — particelle calde, fluttuanti═══════════════════════════════════════════ -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
-/* ── THREE.JS: particelle dorate su sfondo sabbia ── */
-(function(){
+/* ── sfondo  ── */
+(() => {
   const canvas = document.getElementById('c-hero');
   if(!canvas) return;
   const W = canvas.offsetWidth || innerWidth;
@@ -385,7 +383,7 @@
   const camera = new THREE.PerspectiveCamera(55, W/H, .1, 1000);
   camera.position.z = 5;
 
-  /* Particelle calde: terracotta, oro, sabbia */
+  /* sfondo pt.2 */
   const N = 1400;
   const geo = new THREE.BufferGeometry();
   const pos = new Float32Array(N*3);
@@ -452,26 +450,34 @@ ham.addEventListener('click', ()=>{
   ham.classList.toggle('open');
   mob.classList.toggle('open');
 });
-document.querySelectorAll('.ml').forEach(a => a.addEventListener('click', ()=>{
-  ham.classList.remove('open');
-  mob.classList.remove('open');
-}));
+for(const a of document.querySelectorAll('.ml')){
+  a.addEventListener('click', ()=>{
+    ham.classList.remove('open');
+    mob.classList.remove('open');
+  });
+}
 
 /* ── SCROLL REVEAL ── */
 const ro = new IntersectionObserver(es => es.forEach(e=>{
   if(e.isIntersecting){ e.target.classList.add('vis'); ro.unobserve(e.target); }
 }), {threshold:.08});
-document.querySelectorAll('.rv').forEach(el => ro.observe(el));
+for(const el of document.querySelectorAll('.rv')){
+  ro.observe(el);
+}
 
 /* ── CAROSELLO ── */
-(function(){
+/* ── CAROSELLO ── */
+(() => {
   const track = document.getElementById('c-track');
-  const cards = Array.from(document.querySelectorAll('.c-card'));
+  // 1. Usiamo nomi diversi per non fare confusione: 'carouselCards' per il movimento, 'videoCards' per i video
+  const carouselCards = Array.from(document.querySelectorAll('.c-card'));
+  const videoCards = document.querySelectorAll('.card'); 
   const dotsEl = document.getElementById('c-dots');
   let ci = 0;
   const isMob = ()=> window.innerWidth <= 768;
 
-  cards.forEach((_,i)=>{
+  // Generazione pallini (dots)
+  carouselCards.forEach((_,i)=>{
     const d = document.createElement('div');
     d.className = 'c-dot' + (i===0 ? ' on' : '');
     d.onclick = ()=> goC(i);
@@ -486,65 +492,63 @@ document.querySelectorAll('.rv').forEach(el => ro.observe(el));
   }
 
   function goC(idx){
-    ci = Math.max(0, Math.min(idx, cards.length-1));
-    const cw  = cards[0].offsetWidth;
+    ci = Math.max(0, Math.min(idx, carouselCards.length-1));
+    const cw  = carouselCards[0].offsetWidth;
     const gap = parseFloat(getComputedStyle(track).gap) || 28;
     const vw  = track.parentElement.offsetWidth;
 
-    if(isMob()){track.style.transform  = `translateX(${-ci*(cw+gap)}px)`;
+    if(isMob()){
+      track.style.transform  = `translateX(${-ci*(cw+gap)}px)`;
       track.style.paddingLeft = '1.2rem';
-      cards.forEach(c => c.className = 'c-card');
+      for(const c of carouselCards) c.className = 'c-card';
     } else {
       const pad = Math.max((vw/2) - cw/2, 16);
       track.style.paddingLeft = pad + 'px';
       track.style.transform   = `translateX(${-ci*(cw+gap)}px)`;
-      cards.forEach((c,i)=>{
+      carouselCards.forEach((c,i)=>{
         c.className = 'c-card';
         const cls = posClass(i - ci);
         if(cls) c.classList.add(cls);
       });
     }
-    document.querySelectorAll('.c-dot').forEach((d,i) =>
-      d.classList.toggle('on', i===ci)
-    );
+    for(const [i, d] of document.querySelectorAll('.c-dot').entries()){
+      d.classList.toggle('on', i===ci);
+    }
   }
 
+  // GESTIONE VIDEO E VOLUME
+  videoCards.forEach(card => {
+    const video = card.querySelector('.video-card');
+    const btn = card.querySelector('.volume-btn');
+
+    if(btn && video) {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation(); 
+        e.preventDefault();
+
+        if (!video.muted) {
+          video.muted = true;
+          btn.innerText = "🔇";
+        } else {
+          // Silenziamo tutti gli altri
+          document.querySelectorAll('.video-card').forEach(v => {
+            v.muted = true;
+            const otherBtn = v.closest('.card').querySelector('.volume-btn');
+            if(otherBtn) otherBtn.innerText = "🔇";
+          });
+
+          video.muted = false;
+          btn.innerText = "🔊";
+          video.play();
+        }
+      });
+    }
+  });
+
   setTimeout(()=> goC(0), 100);
-  document.getElementById('c-next').onclick = ()=> goC(Math.min(ci+1, cards.length-1));
+  document.getElementById('c-next').onclick = ()=> goC(Math.min(ci+1, carouselCards.length-1));
   document.getElementById('c-prev').onclick = ()=> goC(Math.max(ci-1, 0));
   window.addEventListener('resize', ()=> goC(ci), {passive:true});
-
-  // Selezioniamo tutti i video nel carosello
-const videos = document.querySelectorAll('.video-card');
-
-const handleIntersection = (entries) => {
-    // Troviamo quale video è PIÙ visibile degli altri
-    let mostVisibleVideo = null;
-    let highestRatio = 0;
-
-    entries.forEach(entry => {
-        if (entry.intersectionRatio > highestRatio) {
-            highestRatio = entry.intersectionRatio;
-            mostVisibleVideo = entry.target;
-        }
-    });
-
-    // Applichiamo i cambiamenti
-    videos.forEach(video => {
-        if (video === mostVisibleVideo && highestRatio > 0.5) {
-            video.muted = false;
-            video.play().catch(() => {}); // catch evita errori se il browser blocca
-        } else {
-            video.muted = true;
-        }
-    });
-};
-
-const observer = new IntersectionObserver(handleIntersection, {
-    threshold: [0, 0.25, 0.5, 0.75, 1] // Controlla la visibilità a più livelli
-});
-
-videos.forEach(v => observer.observe(v));
   /* Swipe */
   let ts = 0;
   track.addEventListener('touchstart', e=>{ ts = e.touches[0].clientX; }, {passive:true});
@@ -589,7 +593,7 @@ function setDial(t, btn){
   const el = document.getElementById('dial-text');
   el.classList.add('hide');
   setTimeout(()=>{ el.textContent = DT[t]; el.classList.remove('hide'); }, 260);
-  document.querySelectorAll('.d-btn').forEach(b => b.classList.remove('on'));
+  document.querySelectorAll('.d-btn').forEach(b => { b.classList.remove('on'); });
   btn.classList.add('on');
 }
 document.querySelector('#dialetto video')?.addEventListener('loadeddata', ()=>{
@@ -608,7 +612,7 @@ document.getElementById('q-start-btn').onclick = ()=>{
 
 document.querySelectorAll('.q-opt').forEach(btn =>{
   btn.addEventListener('click', function(){
-    this.closest('.q-opts').querySelectorAll('.q-opt').forEach(b => b.classList.remove('sel'));
+    this.closest('.q-opts').querySelectorAll('.q-opt').forEach(b => { b.classList.remove('sel'); });
     this.classList.add('sel');
     qA['s'+qS] = this.dataset.v;
     setTimeout(advQ, 320);
@@ -651,11 +655,12 @@ function showR(){
 }
 
 function resetQuiz(){
-  qS = 1; Object.keys(qA).forEach(k => delete qA[k]);
-  document.querySelectorAll('.q-step').forEach(s =>{
+  qS = 1;
+  for(const k of Object.keys(qA)) delete qA[k];
+  for(const s of document.querySelectorAll('.q-step')){
     s.classList.remove('on');
-    s.querySelectorAll('.q-opt').forEach(b => b.classList.remove('sel'));
-  });
+    for(const b of s.querySelectorAll('.q-opt')) b.classList.remove('sel');
+  }
   document.getElementById('qs-1').classList.add('on');
   document.getElementById('q-fill').style.width = '33%';
   document.getElementById('q-ctr').textContent   = 'Domanda 1 di 3';

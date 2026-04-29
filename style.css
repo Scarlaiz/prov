@@ -28,21 +28,19 @@ img{display:block;max-width:100%}
 ::-webkit-scrollbar-track{background:var(--sand2)}
 ::-webkit-scrollbar-thumb{background:var(--terra);border-radius:2px}
 
-/* ═══ GRAIN ═══ */
+/*  GRAIN  */
 body::after{
   content:'';position:fixed;inset:0;z-index:9000;pointer-events:none;opacity:.025;
   background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size:220px;
 }
 
-/* ═══ SCROLL REVEAL ═══ */
+/* SCROLL REVEAL */
 .rv{opacity:0;transform:translateY(36px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .rv.vis{opacity:1;transform:none}
 .d1{transition-delay:.1s}.d2{transition-delay:.22s}.d3{transition-delay:.34s}.d4{transition-delay:.48s}
 
-/* ═══════════════════════════════════════════
-   NAVBAR
-═══════════════════════════════════════════ */
+/* NAVBAR */
 #nav{
   position:fixed;top:0;left:0;right:0;z-index:500;
   padding:1.6rem 3rem;
@@ -100,9 +98,7 @@ body::after{
 }
 #mob a:hover{color:var(--terra)}
 
-/* ═══════════════════════════════════════════
-   HERO — luce e spazio
-═══════════════════════════════════════════ */
+/* HERO — luce e spazio */
 #hero{
   position:relative;height:100svh;min-height:640px;
   display:flex;align-items:center;justify-content:center;
@@ -199,9 +195,7 @@ body::after{
 }
 @keyframes scrollPulse{0%,100%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}}
 
-/* ═══════════════════════════════════════════
-   STATS STRIP
-═══════════════════════════════════════════ */
+/* STATS STRIP */
 .stats-strip{
   background:var(--ocean);
   padding:2rem clamp(1rem,5vw,4rem);
@@ -221,9 +215,7 @@ body::after{
 .stat-n em{font-style:italic;color:rgba(255,255,255,.7);font-size:1.4rem}
 .stat-l{font-size:.65rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:.3rem}
 
-/* ═══════════════════════════════════════════
-   SEZIONI — layout
-═══════════════════════════════════════════ */
+/* SEZIONI — layout */
 .sec{padding:clamp(5rem,10vw,9rem) clamp(1.5rem,6vw,6rem)}
 .sec-alt{background:var(--sand2)}
 .sec-cream{background:var(--cream)}
@@ -235,9 +227,7 @@ body::after{
 .s-h2 strong{font-weight:500;color:var(--ocean)}
 .s-rule{width:40px;height:1px;background:var(--terra);display:block;margin:1.4rem 0 2rem}
 
-/* ═══════════════════════════════════════════
-   CAROSELLO
-═══════════════════════════════════════════ */
+/* CAROSELLO */
 .carousel-wrap{overflow:hidden;margin-top:3rem}
 .c-mask{
   overflow:hidden;
@@ -271,6 +261,27 @@ body::after{
 .c-card.left2{transform:perspective(1000px) rotateY(32deg) scale(.78) translateX(40px);opacity:.4}
 .c-card.right2{transform:perspective(1000px) rotateY(-32deg) scale(.78) translateX(-40px);opacity:.4}
 .c-card.far{transform:perspective(1000px) rotateY(42deg) scale(.65);opacity:.15}
+.volume-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.volume-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
 
 /* Media nella card */
 .c-media{
@@ -332,9 +343,7 @@ body::after{
 .c-dot{width:5px;height:5px;border-radius:999px;background:var(--sand3);cursor:pointer;transition:background .3s,width .35s var(--ease)}
 .c-dot.on{background:var(--terra);width:20px}
 
-/* ═══════════════════════════════════════════
-   LUOGHI — grid card 3D
-═══════════════════════════════════════════ */
+/* LUOGHI — grid card 3D */
 .l-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.6rem;margin-top:3rem}
 .l-card{
   position:relative;border-radius:4px;overflow:hidden;cursor:default;
@@ -390,9 +399,7 @@ body::after{
 .fav.on svg{fill:var(--terra);stroke:var(--terra)}
 .fav svg{width:16px;height:16px;fill:none;stroke:var(--ink2);stroke-width:1.8;transition:fill .2s,stroke .2s}
 
-/* ═══════════════════════════════════════════
-   GASTRONOMIA
-═══════════════════════════════════════════ */
+/* GASTRONOMIA */
 .g-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
 .g-list{margin-top:2rem}
 .g-item{
@@ -425,9 +432,7 @@ body::after{
 .g-t{font-family:var(--font-d);font-size:1.2rem;font-weight:500;margin-bottom:.45rem;color:var(--ink)}
 .g-p{font-size:.83rem;font-weight:300;line-height:1.75;color:var(--ink2)}
 
-/* ═══════════════════════════════════════════
-   DIALETTO
-═══════════════════════════════════════════ */
+/*  DIALETTO */
 .dial-wrap{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
 .dial-bigq{
   font-family:var(--font-d);font-size:clamp(6rem,18vw,14rem);font-weight:400;
@@ -464,9 +469,7 @@ body::after{
 .d-vid-ph span:first-child{font-size:2.8rem}
 .d-vid-ph span:last-child{font-size:.75rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--ink2);opacity:.5}
 
-/* ═══════════════════════════════════════════
-   QUIZ
-═══════════════════════════════════════════ */
+/*  QUIZ */
 #quiz{position:relative;overflow:hidden}
 #quiz::before{
   content:'VIAGGIO';font-family:var(--font-d);font-style:italic;
@@ -518,9 +521,7 @@ body::after{
 .q-emoji{font-size:3rem;margin-bottom:1.5rem}
 .q-start-p{font-size:.95rem;font-weight:300;color:var(--ink2);margin-bottom:2.5rem;line-height:1.75;max-width:380px;margin-left:auto;margin-right:auto}
 
-/* ═══════════════════════════════════════════
-   FAQ
-═══════════════════════════════════════════ */
+/*  FAQ */
 .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
 .faq-quote{font-family:var(--font-d);font-size:clamp(1.8rem,4.5vw,3rem);font-weight:400;font-style:italic;line-height:1.2;margin:1.5rem 0;color:var(--ink)}
 .faq-quote em{font-style:normal;color:var(--terra)}
@@ -545,9 +546,7 @@ details[open] summary{color:var(--ink)}
 details[open] summary .arr{transform:rotate(180deg);background:var(--terra);border-color:var(--terra);color:var(--white)}
 details p{padding:0 0 1.2rem;font-size:.84rem;font-weight:300;line-height:1.8;color:var(--ink2)}
 
-/* ═══════════════════════════════════════════
-   FOOTER
-═══════════════════════════════════════════ */
+/* FOOTER */
 footer{
   background:var(--ink);
   padding:3rem clamp(1.5rem,5vw,5rem);
@@ -560,9 +559,7 @@ footer{
 .f-links a:hover{color:var(--gold)}
 .f-copy{font-size:.68rem;color:rgba(255,255,255,.2);font-weight:300}
 
-/* ═══════════════════════════════════════════
-   RESPONSIVE
-═══════════════════════════════════════════ */
+/*  RESPONSIVE */
 @media(max-width:1024px){
   .g-grid,.dial-wrap,.faq-grid{grid-template-columns:1fr;gap:3rem}
   .g-aside{flex-direction:row;flex-wrap:wrap}
